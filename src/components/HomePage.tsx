@@ -12,7 +12,7 @@ const HomePage = () => {
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center">
                 <Mic className="w-6 h-6 text-white" />
               </div>
-              <h1 className="text-2xl font-bold text-white">Audio Expert</h1>
+              <h1 className="text-2xl font-bold text-white">InfoTune AI</h1>
             </div>
             <nav className="flex gap-6 text-sm">
               <a href="#" className="text-blue-200 hover:text-white transition-colors">Home</a>
