@@ -38,7 +38,7 @@ const ChatWindow = ({ onClose }: ChatWindowProps) => {
     } else {
       const welcomeMessage: Message = {
         sender: "bot",
-        text: `👋 Hello! ${getGreeting()}\n\nI'm InfoTune. How can I assist you today ?`,
+        text: `👋 Hello! ${getGreeting()}\n\nI'm SwarAI. How can I assist you today ?`,
       };
       setMessages([welcomeMessage]);
       sessionStorage.setItem("chatHistory", JSON.stringify([welcomeMessage]));
@@ -108,7 +108,7 @@ const ChatWindow = ({ onClose }: ChatWindowProps) => {
     setOptions([]); // 🆕 clear options once user responds
 
     try {
-      const res = await axios.post("http://localhost:8000/chat", {
+      const res = await axios.post("https://ai-chat-bot-backend-f1ff.onrender.com", {
         message: messageToSend,
         user_id: "web_user_1",
       });
@@ -127,7 +127,7 @@ const ChatWindow = ({ onClose }: ChatWindowProps) => {
     } catch (error) {
       const errorMessage: Message = {
         sender: "bot",
-        text: "⚠️ Sorry, I encountered an error. Please ensure the backend server is running at http://localhost:8000.",
+        text: "⚠️ Sorry, I encountered an error. Please ensure the backend server is running.",
       };
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
@@ -173,7 +173,7 @@ const ChatWindow = ({ onClose }: ChatWindowProps) => {
             <span className="text-xl">🎙️</span>
           </div>
           <div>
-            <h3 className="text-white font-semibold">Audio Expert Bot</h3>
+            <h3 className="text-white font-semibold">SwarAI</h3>
             <p className="text-blue-100 text-xs">Online</p>
           </div>
         </div>
