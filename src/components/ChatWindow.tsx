@@ -108,7 +108,7 @@ const ChatWindow = ({ onClose }: ChatWindowProps) => {
     setOptions([]); // 🆕 clear options once user responds
 
     try {
-      const res = await axios.post("https://ai-chat-bot-backend-f1ff.onrender.com", {
+      const res = await axios.post("https://omkar1803-audio-chat-backend.hf.space/chat", {
         message: messageToSend,
         user_id: "web_user_1",
       });
