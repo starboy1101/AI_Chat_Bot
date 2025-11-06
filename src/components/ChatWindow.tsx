@@ -108,7 +108,7 @@ const ChatWindow = ({ onClose }: ChatWindowProps) => {
     setOptions([]); // 🆕 clear options once user responds
 
     try {
-      const res = await axios.post("https://starboy18-chat-bot.hf.space/chat", {
+      const res = await axios.post("https://starboy19-chat-bot.hf.space/chat", {
         message: messageToSend,
         user_id: "web_user_1",
       });
